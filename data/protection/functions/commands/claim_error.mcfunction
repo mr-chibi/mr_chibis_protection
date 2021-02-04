@@ -1,5 +1,5 @@
 #
-tellraw @p [{"text": "[Claim Protection]: ", "color": "green"}, {"text": "Not enough claims to claim this spot.", "color": "red"}]
+tellraw @p [{"text": "[Claim Protection]: ", "color": "green"}, {"text": "You, don't have enough claims! ", "color": "red"}]
 
 #
-scoreboard players set @s[scores={claim=1..}] claim 0
+execute as @s[scores={claim=1..}] run scoreboard players set @s claim 0
