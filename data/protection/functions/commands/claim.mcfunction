@@ -4,6 +4,8 @@ execute unless entity @e[type=minecraft:armor_stand,tag=claim_center,distance=0.
 
 # Summon ArmorStand:
 execute unless entity @e[type=minecraft:armor_stand,tag=claim_center,distance=0..50] run scoreboard players remove @s claims 100
+
+execute unless entity @e[type=minecraft:armor_stand,tag=claim_center,distance=0..50] run tag @p add claim_owner
 execute unless entity @e[type=minecraft:armor_stand,tag=claim_center,distance=0..50] run summon minecraft:armor_stand ~ ~ ~ {Tags:["claim_setup"]}
 
 # Setup Claim Center:
