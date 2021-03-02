@@ -11,6 +11,10 @@ scoreboard objectives add claim_x dummy
 scoreboard objectives add claim_y dummy
 scoreboard objectives add claim_z dummy
 
+#
+scoreboard objectives add claim_chests dummy
+scoreboard objectives add chest_lock dummy
+
 # Commands
 scoreboard objectives add claim trigger
 scoreboard objectives add claim_trust trigger

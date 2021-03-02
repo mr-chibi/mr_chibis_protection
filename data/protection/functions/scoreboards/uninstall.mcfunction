@@ -11,6 +11,10 @@ scoreboard objectives remove claim_x
 scoreboard objectives remove claim_y
 scoreboard objectives remove claim_z
 
+#
+scoreboard objectives remove claim_chests
+scoreboard objectives remove chest_lock
+
 # Commands
 scoreboard objectives remove claim
 scoreboard objectives remove claims_expand

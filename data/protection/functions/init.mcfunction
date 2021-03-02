@@ -25,7 +25,7 @@ execute as @a at @s[scores={claim=1..}] if score @s claims matches 100.. run fun
 execute as @e[type=minecraft:armor_stand,tag=claim_center] at @s if score @s claim_ids = @p[scores={claim_remove=1..}] claim_ids if entity @p[distance=0..3] run function protection:commands/claim_remove
 
 # Claims Trust User:
-execute as @a at @s[tag=claim_owner,scores={claim_trust=1..}] run execute as @e[type=minecraft:armor_stand,tag=claim_center] at @s if score @s claim_ids = @p claim_ids if entity @p[distance=0..3] run function protection:commands/claim_trust
+execute as @a at @s[tag=claim_owner,scores={claim_trust=1..}] run execute as @e[type=minecraft:armor_stand,tag=claim_center] at @s if score @s claim_ids = @p claim_ids if entity @p[distance=0..5] run function protection:commands/claim_trust
 
 
 # Claims List:
