@@ -2,7 +2,6 @@
 execute as @e[type=minecraft:armor_stand,tag=claim_center] at @s if score @s claim_ids = @p claim_ids if entity @p[distance=0..3] run team join claim_owners @p
 
 
-
 # Lock is player doesn't own claim:
 execute as @e[type=minecraft:armor_stand,tag=claim_center,tag=10x] at @s unless score @p claim_ids = @s claim_ids if entity @p[distance=0..6] run function protection:security/lock
 execute as @e[type=minecraft:armor_stand,tag=claim_center,tag=20x] at @s unless score @p claim_ids = @s claim_ids if entity @p[distance=0..10] run function protection:security/lock

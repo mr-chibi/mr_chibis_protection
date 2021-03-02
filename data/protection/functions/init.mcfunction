@@ -22,7 +22,6 @@ execute as @a at @s[scores={claim=1..}] unless score @s claims matches 100.. run
 execute as @a at @s[scores={claim=1..}] if score @s claims matches 100.. run function protection:commands/claim
 
 # Claims Remove:
-execute as @e[type=minecraft:armor_stand,tag=claim_center] at @s if score @s claim_ids = @p[scores={claim_remove=1..}] claim_ids unless entity @p[distance=0..3] run function protection:commands/claim_remove_error
 execute as @e[type=minecraft:armor_stand,tag=claim_center] at @s if score @s claim_ids = @p[scores={claim_remove=1..}] claim_ids if entity @p[distance=0..3] run function protection:commands/claim_remove
 
 # Claims Trust User:
@@ -33,13 +32,13 @@ execute as @a at @s[tag=claim_owner,scores={claim_trust=1..}] run execute as @e[
 execute as @a at @s[scores={claims_list=1..}] run function protection:commands/claims_list
 
 # Claims Expand:
-execute as @e[type=minecraft:armor_stand,tag=claim_center] at @s if score @s claim_ids = @p[scores={claims_expand=1..}] claim_ids unless entity @p[distance=0..3] run function protection:commands/claims_expand_error
-execute as @e[type=minecraft:armor_stand,tag=claim_center] at @s if score @s claim_ids = @p[scores={claims_expand=1..}] claim_ids if entity @p[distance=0..3] run function protection:commands/claims_expand
+execute as @e[type=minecraft:armor_stand,tag=claim_center] at @s if score @s claim_ids = @p[scores={claims_expand=1..},limit=1] claim_ids if entity @p[distance=0..3] run function protection:commands/claims_expand
 
 # Claim Modules:
-execute as @a at @s run function protection:modules/claim_particles
-execute as @a at @s run function protection:modules/claim_display
-execute as @a at @s run function protection:modules/claim_gamemode
+function protection:modules/claim_particles
+function protection:modules/claim_display
+function protection:modules/claim_gamemode
 
 # Block Security:
 function protection:security/init
+function protection:security/mobgriefing

@@ -10,13 +10,13 @@ execute unless entity @e[type=minecraft:armor_stand,tag=claim_center,distance=0.
 
 # Setup Claim Center:
 execute as @e[type=minecraft:armor_stand,tag=claim_setup] at @s run setblock ~ ~-1 ~ minecraft:glowstone
-execute as @e[type=minecraft:armor_stand,tag=claim_setup] at @s run summon minecraft:armor_stand ~ ~ ~ {Small:1b,Tags:["claim_center","10x"],CustomNameVisible:1b,Invisible:1b,Invulnerable:1b,NoGravity:1b,CustomName:"{\"text\": \"Claim Protection\"}"}
+execute as @e[type=minecraft:armor_stand,tag=claim_setup] at @s run summon minecraft:armor_stand ~ ~ ~ {Small:1b,Tags:["claim_center","10x"],CustomNameVisible:1b,Invulnerable:1b,Invisible:1b,NoGravity:1b,CustomName:"{\"text\": \"Claim Protection\"}"}
 
 # Setup Pos[1] & Pos[2]:
-execute as @e[type=minecraft:armor_stand,tag=claim_setup] at @s run summon minecraft:armor_stand ~5 ~ ~5 {Tags:["corner_1","10x"],Invisible:1b,Invulnerable:1b,NoGravity:1b}
-execute as @e[type=minecraft:armor_stand,tag=claim_setup] at @s run summon minecraft:armor_stand ~5 ~ ~-5 {Tags:["corner_2","10x"],Invisible:1b,Invulnerable:1b,NoGravity:1b}
-execute as @e[type=minecraft:armor_stand,tag=claim_setup] at @s run summon minecraft:armor_stand ~-5 ~ ~-5 {Tags:["corner_3","10x"],Invisible:1b,Invulnerable:1b,NoGravity:1b}
-execute as @e[type=minecraft:armor_stand,tag=claim_setup] at @s run summon minecraft:armor_stand ~-5 ~ ~5 {Tags:["corner_4","10x"],Invisible:1b,Invulnerable:1b,NoGravity:1b}
+execute as @e[type=minecraft:armor_stand,tag=claim_setup] at @s run summon minecraft:armor_stand ~5 ~ ~5 {Tags:["corner_1","10x"],Invulnerable:1b,Invisible:1b,NoGravity:1b}
+execute as @e[type=minecraft:armor_stand,tag=claim_setup] at @s run summon minecraft:armor_stand ~5 ~ ~-5 {Tags:["corner_2","10x"],Invulnerable:1b,Invisible:1b,NoGravity:1b}
+execute as @e[type=minecraft:armor_stand,tag=claim_setup] at @s run summon minecraft:armor_stand ~-5 ~ ~-5 {Tags:["corner_3","10x"],Invulnerable:1b,Invisible:1b,NoGravity:1b}
+execute as @e[type=minecraft:armor_stand,tag=claim_setup] at @s run summon minecraft:armor_stand ~-5 ~ ~5 {Tags:["corner_4","10x"],Invulnerable:1b,Invisible:1b,NoGravity:1b}
 
 # Install Claim Ids:
 execute as @e[type=minecraft:armor_stand,tag=claim_center,distance=0..10] at @s store result score @s claim_ids run data get entity @s UUID[0]
