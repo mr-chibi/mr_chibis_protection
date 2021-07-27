@@ -1,0 +1,30 @@
+# Add Trusted Guest:
+execute if entity @e[type=minecraft:marker,distance=0..30,tag=claim_center,tag=30x30] if score @e[type=minecraft:marker,distance=0..30,tag=claim_center,tag=30x30,limit=1] claim_id = @s claim_id run tag @a[tag=claim_guest,distance=0..30] add claim_trusted
+execute if entity @e[type=minecraft:marker,distance=0..25,tag=claim_center,tag=25x25] if score @e[type=minecraft:marker,distance=0..25,tag=claim_center,tag=25x25,limit=1] claim_id = @s claim_id run tag @a[tag=claim_guest,distance=0..25] add claim_trusted
+execute if entity @e[type=minecraft:marker,distance=0..20,tag=claim_center,tag=20x20] if score @e[type=minecraft:marker,distance=0..20,tag=claim_center,tag=20x20,limit=1] claim_id = @s claim_id run tag @a[tag=claim_guest,distance=0..20] add claim_trusted
+execute if entity @e[type=minecraft:marker,distance=0..15,tag=claim_center,tag=15x15] if score @e[type=minecraft:marker,distance=0..15,tag=claim_center,tag=15x15,limit=1] claim_id = @s claim_id run tag @a[tag=claim_guest,distance=0..15] add claim_trusted
+execute if entity @e[type=minecraft:marker,distance=0..10,tag=claim_center,tag=10x10] if score @e[type=minecraft:marker,distance=0..10,tag=claim_center,tag=10x10,limit=1] claim_id = @s claim_id run tag @a[tag=claim_guest,distance=0..10] add claim_trusted
+execute if entity @e[type=minecraft:marker,distance=0..5,tag=claim_center,tag=5x5] if score @e[type=minecraft:marker,distance=0..5,tag=claim_center,tag=5x5,limit=1] claim_id = @s claim_id run tag @a[tag=claim_guest,distance=0..5] add claim_trusted
+
+
+
+# Added Guest, as Trusted to claim:
+execute if entity @e[type=minecraft:marker,distance=0..30,tag=claim_center,tag=30x30] if score @e[type=minecraft:marker,distance=0..30,tag=claim_center,tag=30x30,limit=1] claim_id = @s claim_id run tellraw @s [{"text": "[Claim Protection]: ", "color": "#5B9AE9"}, {"text": "Trusted \"", "color": "#8CE2F7"}, {"selector": "@a[tag=claim_trusted]", "color": "gold"}, {"text": "\" to your claim!", "color": "#8CE2F7"}]
+execute if entity @e[type=minecraft:marker,distance=0..25,tag=claim_center,tag=25x25] if score @e[type=minecraft:marker,distance=0..25,tag=claim_center,tag=25x25,limit=1] claim_id = @s claim_id run tellraw @s [{"text": "[Claim Protection]: ", "color": "#5B9AE9"}, {"text": "Trusted \"", "color": "#8CE2F7"}, {"selector": "@a[tag=claim_trusted]", "color": "gold"}, {"text": "\" to your claim!", "color": "#8CE2F7"}]
+execute if entity @e[type=minecraft:marker,distance=0..20,tag=claim_center,tag=20x20] if score @e[type=minecraft:marker,distance=0..20,tag=claim_center,tag=20x20,limit=1] claim_id = @s claim_id run tellraw @s [{"text": "[Claim Protection]: ", "color": "#5B9AE9"}, {"text": "Trusted \"", "color": "#8CE2F7"}, {"selector": "@a[tag=claim_trusted]", "color": "gold"}, {"text": "\" to your claim!", "color": "#8CE2F7"}]
+execute if entity @e[type=minecraft:marker,distance=0..15,tag=claim_center,tag=15x15] if score @e[type=minecraft:marker,distance=0..15,tag=claim_center,tag=15x15,limit=1] claim_id = @s claim_id run tellraw @s [{"text": "[Claim Protection]: ", "color": "#5B9AE9"}, {"text": "Trusted \"", "color": "#8CE2F7"}, {"selector": "@a[tag=claim_trusted]", "color": "gold"}, {"text": "\" to your claim!", "color": "#8CE2F7"}]
+execute if entity @e[type=minecraft:marker,distance=0..10,tag=claim_center,tag=10x10] if score @e[type=minecraft:marker,distance=0..10,tag=claim_center,tag=10x10,limit=1] claim_id = @s claim_id run tellraw @s [{"text": "[Claim Protection]: ", "color": "#5B9AE9"}, {"text": "Trusted \"", "color": "#8CE2F7"}, {"selector": "@a[tag=claim_trusted]", "color": "gold"}, {"text": "\" to your claim!", "color": "#8CE2F7"}]
+execute if entity @e[type=minecraft:marker,distance=0..5,tag=claim_center,tag=5x5] if score @e[type=minecraft:marker,distance=0..5,tag=claim_center,tag=5x5,limit=1] claim_id = @s claim_id run tellraw @s [{"text": "[Claim Protection]: ", "color": "#5B9AE9"}, {"text": "Trusted \"", "color": "#8CE2F7"}, {"selector": "@a[tag=claim_trusted]", "color": "gold"}, {"text": "\" to your claim!", "color": "#8CE2F7"}]
+
+
+# Tell Guest they've been added to claim:
+execute if entity @e[type=minecraft:marker,distance=0..30,tag=claim_center,tag=30x30] if score @e[type=minecraft:marker,distance=0..30,tag=claim_center,tag=30x30,limit=1] claim_id = @s claim_id run execute as @a[tag=claim_trusted,distance=0..30] at @s run gamemode survival @s
+execute if entity @e[type=minecraft:marker,distance=0..25,tag=claim_center,tag=25x25] if score @e[type=minecraft:marker,distance=0..25,tag=claim_center,tag=25x25,limit=1] claim_id = @s claim_id run execute as @a[tag=claim_trusted,distance=0..25] at @s run gamemode survival @s
+execute if entity @e[type=minecraft:marker,distance=0..20,tag=claim_center,tag=20x20] if score @e[type=minecraft:marker,distance=0..20,tag=claim_center,tag=20x20,limit=1] claim_id = @s claim_id run execute as @a[tag=claim_trusted,distance=0..20] at @s run gamemode survival @s
+execute if entity @e[type=minecraft:marker,distance=0..15,tag=claim_center,tag=15x15] if score @e[type=minecraft:marker,distance=0..15,tag=claim_center,tag=15x15,limit=1] claim_id = @s claim_id run execute as @a[tag=claim_trusted,distance=0..15] at @s run gamemode survival @s
+execute if entity @e[type=minecraft:marker,distance=0..10,tag=claim_center,tag=10x10] if score @e[type=minecraft:marker,distance=0..10,tag=claim_center,tag=10x10,limit=1] claim_id = @s claim_id run execute as @a[tag=claim_trusted,distance=0..10] at @s run gamemode survival @s
+execute if entity @e[type=minecraft:marker,distance=0..5,tag=claim_center,tag=5x5] if score @e[type=minecraft:marker,distance=0..5,tag=claim_center,tag=5x5,limit=1] claim_id = @s claim_id run execute as @a[tag=claim_trusted,distance=0..5] at @s run gamemode survival @s
+
+
+#
+scoreboard players set @s claim_trust 0

@@ -1,23 +1,17 @@
-# Claims:
+# Commands
+scoreboard objectives add claim trigger
+scoreboard objectives add claims_list trigger
+scoreboard objectives add claim_expand trigger
+scoreboard objectives add claim_remove trigger
+scoreboard objectives add claim_trust trigger
+
+# Variables:
+scoreboard objectives add claim_id dummy
 scoreboard objectives add claims dummy
-scoreboard objectives add claims_chat dummy
-scoreboard objectives add claim_expand dummy
+scoreboard objectives add claims_tool dummy
+scoreboard objectives add claims_detect dummy
 
-# Claims IDs:
-scoreboard objectives add claim_ids dummy
-
-# Claims Coords:
+# Claim Coords:
 scoreboard objectives add claim_x dummy
 scoreboard objectives add claim_y dummy
 scoreboard objectives add claim_z dummy
-
-#
-scoreboard objectives add claim_chests dummy
-scoreboard objectives add chest_lock dummy
-
-# Commands
-scoreboard objectives add claim trigger
-scoreboard objectives add claim_trust trigger
-scoreboard objectives add claims_expand trigger
-scoreboard objectives add claim_remove trigger
-scoreboard objectives add claims_list trigger

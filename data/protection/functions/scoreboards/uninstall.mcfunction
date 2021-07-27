@@ -1,22 +1,19 @@
-# Claims:
-scoreboard objectives remove claims
-scoreboard objectives remove claims_chat
+# Commands
+scoreboard objectives remove claim
 scoreboard objectives remove claim_expand
+scoreboard objectives remove claim_remove
+scoreboard objectives remove claim_trust
 
-# Claims IDs:
-scoreboard objectives remove claim_ids
+# Variables:
+scoreboard objectives remove claim_id
+scoreboard objectives remove claims
+scoreboard objectives remove claims_tool
+scoreboard objectives remove claims_detect
 
-# Claims Coords:
+# Claim Coords:
 scoreboard objectives remove claim_x
 scoreboard objectives remove claim_y
 scoreboard objectives remove claim_z
 
-#
-scoreboard objectives remove claim_chests
-scoreboard objectives remove chest_lock
-
-# Commands
-scoreboard objectives remove claim
-scoreboard objectives remove claims_expand
-scoreboard objectives remove claim_remove
-scoreboard objectives remove claims_list
+# Uninstall Pack:
+datapack disable "file/claim_protection"
