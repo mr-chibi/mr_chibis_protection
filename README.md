@@ -7,7 +7,7 @@
   <li>Gain more claims to each hour to expand base</li>
   <li>Base Protection from creeper explosions</li>
   <li>Chest, Furnace, and More Protection from users.</li>
-  <li>Prevent Fire Spreading damage</li>
+  <li>Prevent Fire Spreading damage (Height Limit of 30 & below 30)</li>
   <li>Prevent TNT damage (tnt, tnt_minecarts)</li>
 </ul>
 
