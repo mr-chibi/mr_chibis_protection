@@ -4,7 +4,11 @@
 <h2>What Unique Features does pack offer?</h2>
 <ul>
   <li>Protection from others</li>
-  <li>Gain more claim integers to each hour to expand base</li>
+  <li>Gain more claims to each hour to expand base</li>
+  <li>Base Protection from creeper explosions</li>
+  <li>Chest, Furnace, and More Protection from users.</li>
+  <li>Prevent Fire Spreading damage</li>
+  <li>Prevent TNT damage (tnt, tnt_minecarts)</li>
 </ul>
 
 <h2>How it was written in:</h2>
