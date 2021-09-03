@@ -16,7 +16,7 @@ execute as @a at @s[scores={claim_remove=1..}] run function protection:commands/
 execute as @a at @s[scores={claim_trust=1..}] run function protection:commands/trust
 
 # Execute as Marker:
-execute as @e[type=minecraft:marker,tag=claim_center] at @s run function protection:markers/claim_center
+execute as @a at @s[nbt={SelectedItem:{id:"minecraft:stick"}}] run execute as @e[type=minecraft:marker,tag=claim_center] at @s run function protection:markers/claim_center
 
 # Configeration for claims:
 function protection:configs/mobgriefing
